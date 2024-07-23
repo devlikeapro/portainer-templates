@@ -16,7 +16,7 @@
       "platform": "linux",
       "logo": "https://raw.githubusercontent.com/devlikeapro/portainer-templates/main/images/waha.png",
       "repository": {
-        "url": "https://github.com/devlikapro/portainer-templates",
+        "url": "https://github.com/devlikeapro/portainer-templates",
         "stackfile": "stacks/waha-plus/docker-compose.yml"
       },
       "env": [
