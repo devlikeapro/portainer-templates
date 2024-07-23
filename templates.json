@@ -49,10 +49,12 @@
           "description": "Enable the dashboard",
           "select": [
             {
+              "text": "True",
               "value": "True",
               "default": true
             },
             {
+              "text": "True",
               "value": "False"
             }
           ]
@@ -75,10 +77,12 @@
           "description": "Enable Swagger",
           "select": [
             {
+              "text": "True",
               "value": "True",
               "default": true
             },
             {
+              "text": "False",
               "value": "False"
             }
           ]
@@ -101,10 +105,12 @@
           "description": "Log format",
           "select": [
             {
+              "text": "JSON",
               "value": "JSON",
               "default": true
             },
             {
+              "text": "PRETTY",
               "value": "PRETTY"
             }
           ]
@@ -115,19 +121,24 @@
           "description": "Log level",
           "select": [
             {
+              "text": "trace",
               "value": "trace"
             },
             {
+              "text": "debug",
               "value": "debug"
             },
             {
+              "text": "info",
               "value": "info",
               "default": true
             },
             {
+              "text": "warn",
               "value": "warn"
             },
             {
+              "text": "error",
               "value": "error"
             }
           ]
@@ -139,10 +150,12 @@
           "default": "WEBJS",
           "select": [
             {
+              "text": "WEBJS",
               "value": "WEBJS",
               "default": true
             },
             {
+              "text": "NOWEB",
               "value": "NOWEB"
             }
           ]
@@ -153,10 +166,12 @@
           "description": "Restart all sessions",
           "select": [
             {
+              "text": "True",
               "value": "True",
               "default": true
             },
             {
+              "text": "False",
               "value": "False"
             }
           ]
@@ -167,9 +182,11 @@
           "description": "Print QR",
           "select": [
             {
+              "text": "True",
               "value": "True"
             },
             {
+              "text": "False",
               "value": "False",
               "default": true
             }
