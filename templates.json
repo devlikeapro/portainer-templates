@@ -1,6 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/portainer/templates/v3/schema.json",
-  "version": "3",
+  "version": "2",
   "templates": [
     {
       "id": 1,
