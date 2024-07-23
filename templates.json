@@ -1,6 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/portainer/templates/v3/schema.json",
-  "version": "3",
+  "version": "2",
   "templates": [
     {
       "id": 1,
@@ -11,7 +10,9 @@
       "categories": [
         "WAHA"
       ],
-      "ports": ["3000/tcp"],
+      "ports": [
+        "3000/tcp"
+      ],
       "platform": "linux",
       "logo": "https://raw.githubusercontent.com/devlikeapro/portainer-templates/main/images/waha.png",
       "image": "devlikeapro/waha-plus:latest",
@@ -25,30 +26,36 @@
       ],
       "env": [
         {
+          "name": "WHATSAPP_API_KEY",
+          "label": "API Key",
+          "description": "API Key for the API (protect your API)",
+          "default": "321"
+        },
+        {
           "name": "WHATSAPP_API_PORT",
           "label": "API Port",
           "description": "Port for the API",
-          "default": "3000",
-          "preset": true
+          "default": "3000"
         },
         {
           "name": "WHATSAPP_API_HOSTNAME",
           "label": "API Hostname",
           "description": "Hostname for the API",
-          "default": "localhost",
-          "preset": true
-        },
-        {
-          "name": "WHATSAPP_API_KEY",
-          "label": "API Key",
-          "description": "API Key for the API",
-          "default": ""
+          "default": "localhost"
         },
         {
           "name": "WAHA_DASHBOARD_ENABLED",
           "label": "Dashboard Enabled",
           "description": "Enable the dashboard",
-          "default": "true"
+          "select": [
+            {
+              "value": "True",
+              "default": true
+            },
+            {
+              "value": "False"
+            }
+          ]
         },
         {
           "name": "WAHA_DASHBOARD_USERNAME",
@@ -66,49 +73,107 @@
           "name": "WHATSAPP_SWAGGER_ENABLED",
           "label": "Swagger Enabled",
           "description": "Enable Swagger",
-          "default": "true"
+          "select": [
+            {
+              "value": "True",
+              "default": true
+            },
+            {
+              "value": "False"
+            }
+          ]
         },
         {
           "name": "WHATSAPP_SWAGGER_USERNAME",
           "label": "Swagger Username",
           "description": "Username for Swagger",
-          "default": ""
+          "default": "swagger"
         },
         {
           "name": "WHATSAPP_SWAGGER_PASSWORD",
           "label": "Swagger Password",
           "description": "Password for Swagger",
-          "default": ""
+          "default": "swagger"
         },
         {
           "name": "WAHA_LOG_FORMAT",
           "label": "Log Format",
           "description": "Log format",
-          "default": "JSON"
+          "select": [
+            {
+              "value": "JSON",
+              "default": true
+            },
+            {
+              "value": "PRETTY"
+            }
+          ]
         },
         {
           "name": "WAHA_LOG_LEVEL",
           "label": "Log Level",
           "description": "Log level",
-          "default": "info"
+          "select": [
+            {
+              "value": "trace"
+            },
+            {
+              "value": "debug"
+            },
+            {
+              "value": "info",
+              "default": true
+            },
+            {
+              "value": "warn"
+            },
+            {
+              "value": "error"
+            }
+          ]
         },
         {
           "name": "WHATSAPP_DEFAULT_ENGINE",
           "label": "Default Engine",
           "description": "Default engine",
-          "default": "WEBJS"
+          "default": "WEBJS",
+          "select": [
+            {
+              "value": "WEBJS",
+              "default": true
+            },
+            {
+              "value": "NOWEB"
+            }
+          ]
         },
         {
           "name": "WHATSAPP_RESTART_ALL_SESSIONS",
           "label": "Restart All Sessions",
-            "description": "Restart all sessions",
-            "default": "True"
+          "description": "Restart all sessions",
+          "select": [
+            {
+              "value": "True",
+              "default": true
+            },
+            {
+              "value": "False"
+            }
+          ]
         },
         {
           "name": "WAHA_PRINT_QR",
           "label": "Print QR",
           "description": "Print QR",
-          "default": "False"
+          "select": [
+            {
+              "value": "True"
+            },
+            {
+              "value": "False",
+              "default": true
+            }
+          ]
         },
         {
           "name": "WHATSAPP_FILES_LIFETIME",
@@ -120,7 +185,8 @@
           "name": "WHATSAPP_FILES_FOLDER",
           "label": "Files Folder",
           "description": "Files Folder",
-          "default": "/app/.media"
+          "default": "/app/.media",
+          "preset": false
         }
       ]
     }
