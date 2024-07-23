@@ -1,0 +1,36 @@
+services:
+  waha:
+    restart: always
+    image: devlikeapro/waha-plus:latest
+    ports:
+      - '3000:3000/tcp'
+    volumes:
+      - waha_sessions:/app/.sessions
+      - waha_media:/app/.media
+
+    environment:
+      - WHATSAPP_API_PORT=${WHATSAPP_API_PORT:-3000}
+      - WHATSAPP_API_HOSTNAME=${WHATSAPP_API_HOSTNAME:-localhost}
+
+      - WHATSAPP_API_KEY=${WHATSAPP_API_KEY}
+
+      - WAHA_DASHBOARD_ENABLED=${WAHA_DASHBOARD_ENABLED:-true}
+      - WAHA_DASHBOARD_USERNAME=${WAHA_DASHBOARD_USERNAME:-waha}
+      - WAHA_DASHBOARD_PASSWORD=${WAHA_DASHBOARD_PASSWORD:-waha}
+
+      - WHATSAPP_SWAGGER_ENABLED=false
+      - WHATSAPP_SWAGGER_USERNAME=${WHATSAPP_SWAGGER_USERNAME}
+      - WHATSAPP_SWAGGER_PASSWORD=${WHATSAPP_SWAGGER_PASSWORD}
+      - WAHA_LOG_FORMAT=${WAHA_LOG_FORMAT:-JSON}
+      - WAHA_LOG_LEVEL=${WAHA_LOG_LEVEL:-info}
+      - WHATSAPP_DEFAULT_ENGINE=${WHATSAPP_DEFAULT_ENGINE:-WEBJS}
+      - WHATSAPP_RESTART_ALL_SESSIONS=True
+      - WAHA_PRINT_QR=False
+      - WHATSAPP_SWAGGER_CONFIG_ADVANCED=true
+
+      - WHATSAPP_FILES_LIFETIME=${WHATSAPP_FILES_LIFETIME:-0}
+      - WHATSAPP_FILES_FOLDER=${WHATSAPP_FILES_FOLDER:-/app/.media}
+
+volumes:
+  waha_sessions: {}
+  waha_media: {}

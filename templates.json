@@ -3,10 +3,10 @@
   "templates": [
     {
       "id": 1,
-      "type": 1,
+      "type": 3,
       "title": "WAHA Plus",
       "description": "WhatsApp HTTP API Plus",
-      "note": "Run instance with file storage as a container",
+      "note": "Run instance with file storage",
       "categories": [
         "WAHA"
       ],
@@ -15,15 +15,10 @@
       ],
       "platform": "linux",
       "logo": "https://raw.githubusercontent.com/devlikeapro/portainer-templates/main/images/waha.png",
-      "image": "devlikeapro/waha-plus:latest",
-      "volumes": [
-        {
-          "container": "/app/.sessions"
-        },
-        {
-          "container": "/app/.media"
-        }
-      ],
+      "repository": {
+        "url": "https://github.com/devlikapro/portainer-templates",
+        "stackfile": "stacks/waha-plus/docker-compose.yml"
+      },
       "env": [
         {
           "name": "WHATSAPP_API_KEY",
