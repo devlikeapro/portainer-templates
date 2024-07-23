@@ -5,7 +5,7 @@
       "id": 1,
       "type": 3,
       "title": "WAHA Plus",
-      "description": "WhatsApp HTTP API - Plus Version"
+      "description": "WhatsApp HTTP API - Plus Version",
       "note": "Run instance with file storage",
       "categories": [
         "WAHA"
@@ -21,7 +21,7 @@
       "id": 2,
       "type": 3,
       "title": "WAHA Core",
-      "description": "WhatsApp HTTP API - Core Version"
+      "description": "WhatsApp HTTP API - Core Version",
       "note": "Run instance with file storage",
       "categories": [
         "WAHA"
