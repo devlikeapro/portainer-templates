@@ -5,202 +5,33 @@
       "id": 1,
       "type": 3,
       "title": "WAHA Plus",
-      "description": "WhatsApp HTTP API Plus",
+      "description": "WhatsApp HTTP API - Plus Version"
       "note": "Run instance with file storage",
       "categories": [
         "WAHA"
-      ],
-      "ports": [
-        "3000/tcp"
       ],
       "platform": "linux",
       "logo": "https://raw.githubusercontent.com/devlikeapro/portainer-templates/main/images/waha.png",
       "repository": {
         "url": "https://github.com/devlikeapro/portainer-templates",
         "stackfile": "stacks/waha-plus/docker-compose.yml"
-      },
-      "env": [
-        {
-          "name": "WHATSAPP_API_KEY",
-          "label": "API Key",
-          "description": "API Key for the API (protect your API)",
-          "default": "321"
-        },
-        {
-          "name": "WHATSAPP_API_PORT",
-          "label": "API Port",
-          "description": "Port for the API",
-          "default": "3000"
-        },
-        {
-          "name": "WHATSAPP_API_HOSTNAME",
-          "label": "API Hostname",
-          "description": "Hostname for the API",
-          "default": "localhost"
-        },
-        {
-          "name": "WAHA_DASHBOARD_ENABLED",
-          "label": "Dashboard Enabled",
-          "description": "Enable the dashboard",
-          "select": [
-            {
-              "text": "Dashboard Enabled",
-              "value": "True",
-              "default": true
-            },
-            {
-              "text": "Dashboard Disabled",
-              "value": "False"
-            }
-          ]
-        },
-        {
-          "name": "WAHA_DASHBOARD_USERNAME",
-          "label": "Dashboard Username",
-          "description": "Username for the dashboard",
-          "default": "waha"
-        },
-        {
-          "name": "WAHA_DASHBOARD_PASSWORD",
-          "label": "Dashboard Password",
-          "description": "Password for the dashboard",
-          "default": "waha"
-        },
-        {
-          "name": "WHATSAPP_SWAGGER_ENABLED",
-          "label": "Swagger Enabled",
-          "description": "Enable Swagger",
-          "select": [
-            {
-              "text": "Swagger Enabled",
-              "value": "True",
-              "default": true
-            },
-            {
-              "text": "Swagger Disabled",
-              "value": "False"
-            }
-          ]
-        },
-        {
-          "name": "WHATSAPP_SWAGGER_USERNAME",
-          "label": "Swagger Username",
-          "description": "Username for Swagger",
-          "default": "swagger"
-        },
-        {
-          "name": "WHATSAPP_SWAGGER_PASSWORD",
-          "label": "Swagger Password",
-          "description": "Password for Swagger",
-          "default": "swagger"
-        },
-        {
-          "name": "WAHA_LOG_FORMAT",
-          "label": "Log Format",
-          "description": "Log format",
-          "select": [
-            {
-              "text": "JSON",
-              "value": "JSON",
-              "default": true
-            },
-            {
-              "text": "PRETTY",
-              "value": "PRETTY"
-            }
-          ]
-        },
-        {
-          "name": "WAHA_LOG_LEVEL",
-          "label": "Log Level",
-          "description": "Log level",
-          "select": [
-            {
-              "text": "trace",
-              "value": "trace"
-            },
-            {
-              "text": "debug",
-              "value": "debug"
-            },
-            {
-              "text": "info",
-              "value": "info",
-              "default": true
-            },
-            {
-              "text": "warn",
-              "value": "warn"
-            },
-            {
-              "text": "error",
-              "value": "error"
-            }
-          ]
-        },
-        {
-          "name": "WHATSAPP_DEFAULT_ENGINE",
-          "label": "Default Engine",
-          "description": "Default engine",
-          "default": "WEBJS",
-          "select": [
-            {
-              "text": "WEBJS - Chrome based",
-              "value": "WEBJS",
-              "default": true
-            },
-            {
-              "text": "NOWEB - Light-way websocket direct communication",
-              "value": "NOWEB"
-            }
-          ]
-        },
-        {
-          "name": "WHATSAPP_RESTART_ALL_SESSIONS",
-          "label": "Restart All Sessions",
-          "description": "Restart all sessions",
-          "select": [
-            {
-              "text": "Yes, restart all on container restart",
-              "value": "True",
-              "default": true
-            },
-            {
-              "text": "No (you'll have to manually start every session)",
-              "value": "False"
-            }
-          ]
-        },
-        {
-          "name": "WAHA_PRINT_QR",
-          "label": "Print QR",
-          "description": "Print QR",
-          "select": [
-            {
-              "text": "Print QR in logs",
-              "value": "True"
-            },
-            {
-              "text": "Don't print QR in logs",
-              "value": "False",
-              "default": true
-            }
-          ]
-        },
-        {
-          "name": "WHATSAPP_FILES_LIFETIME",
-          "label": "Files Lifetime in seconds (0 for unlimited)",
-          "description": "Files lifetime",
-          "default": "0"
-        },
-        {
-          "name": "WHATSAPP_FILES_FOLDER",
-          "label": "Files Folder",
-          "description": "Files Folder",
-          "default": "/app/.media",
-          "preset": false
-        }
-      ]
+      }
+    },
+    {
+      "id": 2,
+      "type": 3,
+      "title": "WAHA Core",
+      "description": "WhatsApp HTTP API - Core Version"
+      "note": "Run instance with file storage",
+      "categories": [
+        "WAHA"
+      ],
+      "platform": "linux",
+      "logo": "https://raw.githubusercontent.com/devlikeapro/portainer-templates/main/images/waha.png",
+      "repository": {
+        "url": "https://github.com/devlikeapro/portainer-templates",
+        "stackfile": "stacks/waha-core/docker-compose.yml"
+      }
     }
   ]
 }

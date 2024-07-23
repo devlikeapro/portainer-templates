@@ -1,7 +1,7 @@
 services:
   waha:
     restart: always
-    image: devlikeapro/waha-plus:latest
+    image: devlikeapro/waha:latest
     ports:
       - '3009:3009/tcp'
     volumes:
