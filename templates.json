@@ -1,0 +1,128 @@
+{
+  "$schema": "https://raw.githubusercontent.com/portainer/templates/v3/schema.json",
+  "version": "3",
+  "templates": [
+    {
+      "id": 1,
+      "type": 1,
+      "title": "WAHA Plus",
+      "description": "WhatsApp HTTP API Plus",
+      "note": "Run instance with file storage as a container",
+      "categories": [
+        "WAHA"
+      ],
+      "ports": ["3000/tcp"],
+      "platform": "linux",
+      "logo": "https://raw.githubusercontent.com/devlikeapro/portainer-templates/main/images/waha.png",
+      "image": "devlikeapro/waha-plus:latest",
+      "volumes": [
+        {
+          "container": "/app/.sessions"
+        },
+        {
+          "container": "/app/.media"
+        }
+      ],
+      "env": [
+        {
+          "name": "WHATSAPP_API_PORT",
+          "label": "API Port",
+          "description": "Port for the API",
+          "default": "3000",
+          "preset": true
+        },
+        {
+          "name": "WHATSAPP_API_HOSTNAME",
+          "label": "API Hostname",
+          "description": "Hostname for the API",
+          "default": "localhost",
+          "preset": true
+        },
+        {
+          "name": "WHATSAPP_API_KEY",
+          "label": "API Key",
+          "description": "API Key for the API",
+          "default": ""
+        },
+        {
+          "name": "WAHA_DASHBOARD_ENABLED",
+          "label": "Dashboard Enabled",
+          "description": "Enable the dashboard",
+          "default": "true"
+        },
+        {
+          "name": "WAHA_DASHBOARD_USERNAME",
+          "label": "Dashboard Username",
+          "description": "Username for the dashboard",
+          "default": "waha"
+        },
+        {
+          "name": "WAHA_DASHBOARD_PASSWORD",
+          "label": "Dashboard Password",
+          "description": "Password for the dashboard",
+          "default": "waha"
+        },
+        {
+          "name": "WHATSAPP_SWAGGER_ENABLED",
+          "label": "Swagger Enabled",
+          "description": "Enable Swagger",
+          "default": "true"
+        },
+        {
+          "name": "WHATSAPP_SWAGGER_USERNAME",
+          "label": "Swagger Username",
+          "description": "Username for Swagger",
+          "default": ""
+        },
+        {
+          "name": "WHATSAPP_SWAGGER_PASSWORD",
+          "label": "Swagger Password",
+          "description": "Password for Swagger",
+          "default": ""
+        },
+        {
+          "name": "WAHA_LOG_FORMAT",
+          "label": "Log Format",
+          "description": "Log format",
+          "default": "JSON"
+        },
+        {
+          "name": "WAHA_LOG_LEVEL",
+          "label": "Log Level",
+          "description": "Log level",
+          "default": "info"
+        },
+        {
+          "name": "WHATSAPP_DEFAULT_ENGINE",
+          "label": "Default Engine",
+          "description": "Default engine",
+          "default": "WEBJS"
+        },
+        {
+          "name": "WHATSAPP_RESTART_ALL_SESSIONS",
+          "label": "Restart All Sessions",
+            "description": "Restart all sessions",
+            "default": "True"
+        },
+        {
+          "name": "WAHA_PRINT_QR",
+          "label": "Print QR",
+          "description": "Print QR",
+          "default": "False"
+        },
+        {
+          "name": "WHATSAPP_FILES_LIFETIME",
+          "label": "Files Lifetime in seconds (0 for unlimited)",
+          "description": "Files lifetime",
+          "default": "0"
+        },
+        {
+          "name": "WHATSAPP_FILES_FOLDER",
+          "label": "Files Folder",
+          "description": "Files Folder",
+          "default": "/app/.media"
+        }
+      ]
+    }
+  ]
+}
