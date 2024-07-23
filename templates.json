@@ -44,12 +44,12 @@
           "description": "Enable the dashboard",
           "select": [
             {
-              "text": "Enabled",
+              "text": "Dashboard Enabled",
               "value": "True",
               "default": true
             },
             {
-              "text": "Disabled",
+              "text": "Dashboard Disabled",
               "value": "False"
             }
           ]
@@ -72,12 +72,12 @@
           "description": "Enable Swagger",
           "select": [
             {
-              "text": "Enabled",
-              "value": "Disabled",
+              "text": "Swagger Enabled",
+              "value": "True",
               "default": true
             },
             {
-              "text": "False",
+              "text": "Swagger Disabled",
               "value": "False"
             }
           ]
