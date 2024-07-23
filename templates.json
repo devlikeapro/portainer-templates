@@ -49,12 +49,12 @@
           "description": "Enable the dashboard",
           "select": [
             {
-              "text": "True",
+              "text": "Enabled",
               "value": "True",
               "default": true
             },
             {
-              "text": "True",
+              "text": "Disabled",
               "value": "False"
             }
           ]
@@ -77,8 +77,8 @@
           "description": "Enable Swagger",
           "select": [
             {
-              "text": "True",
-              "value": "True",
+              "text": "Enabled",
+              "value": "Disabled",
               "default": true
             },
             {
@@ -150,12 +150,12 @@
           "default": "WEBJS",
           "select": [
             {
-              "text": "WEBJS",
+              "text": "WEBJS - Chrome based",
               "value": "WEBJS",
               "default": true
             },
             {
-              "text": "NOWEB",
+              "text": "NOWEB - Light-way websocket direct communication",
               "value": "NOWEB"
             }
           ]
@@ -166,12 +166,12 @@
           "description": "Restart all sessions",
           "select": [
             {
-              "text": "True",
+              "text": "Yes, restart all on container restart",
               "value": "True",
               "default": true
             },
             {
-              "text": "False",
+              "text": "No (you'll have to manually start every session)",
               "value": "False"
             }
           ]
@@ -182,11 +182,11 @@
           "description": "Print QR",
           "select": [
             {
-              "text": "True",
+              "text": "Print QR in logs",
               "value": "True"
             },
             {
-              "text": "False",
+              "text": "Don't print QR in logs",
               "value": "False",
               "default": true
             }
